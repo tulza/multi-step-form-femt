@@ -37,7 +37,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "src/components/MultiStepFormPage.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "typeRoots": ["../node_modules/@types", "../@types"]
 }

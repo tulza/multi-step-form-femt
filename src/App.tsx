@@ -1,9 +1,9 @@
 import "@styles/styles.css";
 import "@styles/fonts.css";
-import Home from "@components/Home";
+import MultiStepFormPage from "@components/MultiStepFormPage";
 
 function App() {
-  return <Home />;
+  return <MultiStepFormPage />;
 }
 
 export default App;
