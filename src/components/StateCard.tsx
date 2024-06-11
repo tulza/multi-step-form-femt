@@ -1,7 +1,17 @@
-import React from "react";
+import ProcessStep from "./ProcessStep";
 
-const StateCard = () => {
-  return <div className="h-full w-[270px] rounded-lg bg-purplishBlue"></div>;
+type StateCardProps = {
+  currentStep: number;
+};
+const StateCard = ({ currentStep }: StateCardProps) => {
+  return (
+    <div className="sideBarImage flex h-[568px] w-[274px] flex-col gap-8 p-8 pt-10">
+      <ProcessStep stateId={1} description="your info" />
+      <ProcessStep stateId={2} description="select plan" />
+      <ProcessStep stateId={3} description="add-ons" />
+      <ProcessStep stateId={4} description="summary" />
+    </div>
+  );
 };
 
 export default StateCard;

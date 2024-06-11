@@ -24,3 +24,7 @@ html,
 #root {
   @apply min-h-[100vh] w-[100vw];
 }
+
+.sideBarImage {
+  background-image: url("../assets/images/bg-sidebar-desktop.svg");
+}
