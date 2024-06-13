@@ -16,7 +16,7 @@ const PersonalInfoForm = () => {
         title="Personal Info"
         description="Please provide your name, email address, and phone number."
       />
-      <form className="mt-8 flex flex-col gap-4">
+      <form className="flex flex-col gap-4">
         <TextInput
           placeholder="e.g. stephen King"
           description="Name"

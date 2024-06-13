@@ -1,10 +1,10 @@
 import { useState } from "react";
-import SinglePage from "./SinglePage";
-import StateCard from "./StateCard";
-import PersonalInfoForm from "./StepForms/PersonalInfoForm";
-import Button from "./Button";
-import SelectPlan from "./StepForms/SelectPlan";
-import AddonsStep from "./StepForms/AddonsStep";
+import SinglePage from "../SinglePage";
+import StateCard from "../StateCard";
+import PersonalInfoForm from "./PersonalInfoForm";
+import Button from "../Button";
+import SelectPlan from "./SelectPlan";
+import AddonsStep from "./AddonsStep";
 
 const stateComponent = [
   <PersonalInfoForm />,
