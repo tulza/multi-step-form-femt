@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
-import { TextInput } from "./TextInput";
+import { TextInput } from "../TextInput";
+import StepHeader from "../StepHeader";
 
 type Input = {
   name: string;
@@ -10,11 +11,11 @@ type Input = {
 const PersonalInfoForm = () => {
   const { register } = useForm<Input>();
   return (
-    <div className="h-full">
-      <h1 className="text-3xl font-bold text-marineBlue">Personal Info</h1>
-      <h3 className="text-coolGray">
-        Please provide your name, email address, and phone number.
-      </h3>
+    <div className="w-full">
+      <StepHeader
+        title="Personal Info"
+        description="Please provide your name, email address, and phone number."
+      />
       <form className="mt-8 flex flex-col gap-4">
         <TextInput
           placeholder="e.g. stephen King"
