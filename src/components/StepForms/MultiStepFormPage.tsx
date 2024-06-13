@@ -6,6 +6,7 @@ import Button from "../Button";
 import SelectPlan from "./SelectPlan";
 import AddonsStep from "./AddonsStep";
 import FinishUpStep from "./FinishUpStep";
+import { AnimatePresence, motion } from "framer-motion";
 
 const stateComponent = [
   <PersonalInfoForm />,
@@ -26,13 +27,32 @@ const MultiStepFormPage = () => {
     setState(state - 1);
   };
 
+  const nextanim = {
+    initial: { opacity: 0, y: 10 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -10 },
+  };
+  const backanim = {
+    initial: { opacity: 0, y: -10 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 10 },
+  };
+
   return (
     <SinglePage classname="bg-magnolia overflow-hidden text-coolGray" centerObj>
       <div className="flex w-[940px] gap-4 rounded-2xl bg-white p-4 shadow-sm">
         <StateCard currentStep={state} />
         <div className="flex w-full justify-center">
           <div className=" m-8 mb-4 flex w-[450px] flex-col justify-between">
-            {stateComponent[state]}
+            <AnimatePresence mode="wait">
+              <motion.div
+                {...nextanim}
+                transition={{ ease: "easeInOut", duration: 0.15 }}
+                key={state}
+              >
+                {stateComponent[state]}
+              </motion.div>
+            </AnimatePresence>
             <div className="flex flex-row-reverse items-center justify-between">
               <Button label="Next Step" onClick={handleNext} />
               {state != 0 && (
