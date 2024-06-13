@@ -15,6 +15,12 @@ const stateComponent = [
   <FinishUpStep />,
 ];
 
+const nextanim = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -10 },
+};
+
 const MultiStepFormPage = () => {
   const [state, setState] = useState(0);
 
@@ -25,17 +31,6 @@ const MultiStepFormPage = () => {
   const handlePrevious = () => {
     if (state <= 0) return;
     setState(state - 1);
-  };
-
-  const nextanim = {
-    initial: { opacity: 0, y: 10 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -10 },
-  };
-  const backanim = {
-    initial: { opacity: 0, y: -10 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 10 },
   };
 
   return (

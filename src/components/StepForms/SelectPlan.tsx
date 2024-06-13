@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import StepHeader from "../StepHeader";
 import { IconAdvance, IconArcade, IconPro } from "@/assets/images";
+import { useState } from "react";
 
 const SelectPlan = () => {
+  const [isAnnual, setIsAnnual] = useState(true);
+  const toggle = () => setIsAnnual(!isAnnual);
   return (
     <div className="h-full">
       <StepHeader
@@ -16,9 +19,13 @@ const SelectPlan = () => {
       </div>
       <div className="mt-8 flex h-12 w-full items-center justify-center gap-5 rounded-md bg-magnolia">
         <p>Yearly</p>
-        <div className="flex h-5 w-10 rounded-full bg-marineBlue p-1">
+        <div
+          className="relative flex h-5 w-10 rounded-full bg-marineBlue p-1"
+          style={{ justifyContent: isAnnual ? "flex-start" : "flex-end" }}
+        >
+          <button className="absolute h-full w-full" onClick={toggle}></button>
           <motion.div
-            className="aspect-square w-3 rounded-full bg-white"
+            className="pointer-events-none left-0 top-0 aspect-square w-3 rounded-full bg-white"
             layout
           />
         </div>
