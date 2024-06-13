@@ -16,9 +16,9 @@ const ProcessStep = memo(
 
     return (
       <div className="flex items-center gap-4">
-        <StepBubble id={id} active={currentStep === id} />
+        <StepBubble id={id + 1} active={currentStep === id} />
         <div className="flex h-full flex-col justify-between leading-3">
-          <p className="text-[14px] uppercase tracking-tighter text-coolGray">
+          <p className="text-[14px] uppercase tracking-tighter">
             Step {id}
           </p>
           <h3 className="text-base font-bold uppercase tracking-wider text-white">

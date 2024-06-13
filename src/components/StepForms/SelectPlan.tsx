@@ -30,7 +30,10 @@ const SelectPlan = () => {
 
 const RadioSelectBox = ({ value, icon }: { value?: string; icon?: string }) => {
   return (
-    <motion.div className="relative h-40 w-[135px]" whileTap={{ scale: 0.9 }}>
+    <motion.div
+      className="relative h-[180px] w-[135px]"
+      whileTap={{ scale: 0.9 }}
+    >
       <input
         type="radio"
         name="plan"
@@ -41,7 +44,7 @@ const RadioSelectBox = ({ value, icon }: { value?: string; icon?: string }) => {
         <img src={icon} className="w-min select-none" />
         <div>
           <h3 className=" font-bold text-marineBlue">Arcade</h3>
-          <p className="text-sm text-coolGray">$90/yr</p>
+          <p className="text-sm">$90/yr</p>
           <p className="text-sm text-marineBlue">2 months free</p>
         </div>
       </div>

@@ -4,8 +4,7 @@ interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
   description: string;
   variants?: "default";
 }
-const InputVariants =
-  "h-12 w-full rounded-md border pl-4 text-marineBlue placeholder:text-coolGray";
+const InputVariants = "h-12 w-full rounded-md border pl-4 text-marineBlue";
 
 const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
   ({ ...props }, ref) => {
