@@ -4,6 +4,7 @@ import IconPro from "./icon-pro.svg";
 import IconArcade from "./icon-arcade.svg";
 import IconAdvance from "./icon-advanced.svg";
 import frontendMentorIcon from "./favicon-32x32.png";
+import Checkmark from "./icon-checkmark.svg";
 
 export {
   BgSideBar,
@@ -12,4 +13,5 @@ export {
   IconArcade,
   IconAdvance,
   frontendMentorIcon,
+  Checkmark,
 };

@@ -1,5 +1,6 @@
 import { memo } from "react";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 interface StateIndicatorProps {
   id: number;
@@ -18,9 +19,7 @@ const ProcessStep = memo(
       <div className="flex items-center gap-4">
         <StepBubble id={id + 1} active={currentStep === id} />
         <div className="flex h-full flex-col justify-between leading-3">
-          <p className="text-[14px] uppercase tracking-tighter">
-            Step {id}
-          </p>
+          <p className="text-[14px] uppercase tracking-tighter">Step {id}</p>
           <h3 className="text-base font-bold uppercase tracking-wider text-white">
             {description}
           </h3>
@@ -34,7 +33,7 @@ const StepBubble = memo(({ id, active }: { id: number; active?: boolean }) => {
   return (
     <div
       className={clsx(
-        "grid aspect-square w-8 place-items-center rounded-full border text-sm font-bold text-white",
+        "grid aspect-square w-8 place-items-center rounded-full border text-sm font-bold text-white transition-colors duration-150",
         active && "border-none bg-lightBlue !text-marineBlue",
       )}
     >

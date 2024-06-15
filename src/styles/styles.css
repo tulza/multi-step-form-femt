@@ -4,18 +4,19 @@
 
 :root {
   /*Primary*/
-  --marineBlue: 213deg 96% 18%;
-  --purplishBlue: 243deg 100% 62%;
-  --pastelBlue: 228deg 100% 84%;
-  --lightBlue: 206deg 94% 87%;
-  --strawberryRed: 354deg 84% 57%;
+  /*Primary*/
+  --marineBlue: 213 96% 18%; /*hsl(213 96% 18%)*/
+  --purplishBlue: 243 100% 62%; /*hsl(243 100% 62%)*/
+  --pastelBlue: 228 100% 84%; /*hsl(228 100% 84%)*/
+  --lightBlue: 206 94% 87%; /*hsl(206 94% 87%)*/
+  --strawberryRed: 354 84% 57%; /*hsl(354 84% 57%)*/
 
   /*Neutral*/
-  --coolGray: 231deg 11% 63%;
-  --lightGray: 229deg 24% 87%;
-  --magnolia: 217deg 100% 97%;
-  --alabaster: 231deg 100% 99%;
-  --white: 0deg 0% 100%;
+  --coolGray: 231 11% 63%; /*hsl(231 11% 63%)*/
+  --lightGray: 229 24% 87%; /*hsl(229 24% 87%)*/
+  --magnolia: 217 100% 97%; /*hsl(217 100% 97%)*/
+  --alabaster: 231 100% 99%; /*hsl(231 100% 99%)*/
+  --white: 0 0% 100%; /*hsl(0 0% 100%)*/
 }
 
 html,

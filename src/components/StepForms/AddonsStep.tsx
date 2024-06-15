@@ -1,3 +1,4 @@
+import { Checkmark } from "@/assets/images";
 import StepHeader from "@components/StepHeader";
 
 const AddonsStep = () => {
@@ -27,15 +28,17 @@ type checkboxProps = {
   description?: string;
   value?: string;
 };
-const CheckBox = ({ label, description, value }: checkboxProps) => {
+const CheckBox = ({ label, description }: checkboxProps) => {
   return (
     <div className="relative flex h-[80px] items-center rounded-lg  ">
       <input
         type="checkbox"
         className="peer absolute h-full w-full opacity-0"
       />
-      <div className="peer-checked:bg-purplishBlue/5 pointer-events-none absolute h-full w-full rounded-[inherit] border peer-checked:border-purplishBlue" />
-      <div className="m-6 aspect-square w-[20px] rounded border peer-checked:bg-purplishBlue" />
+      <div className="pointer-events-none absolute h-full w-full rounded-[inherit] border peer-checked:border-purplishBlue peer-checked:bg-purplishBlue/5" />
+      <div className="pointer-events-none m-6 grid aspect-square w-[20px] place-items-center rounded border peer-checked:bg-purplishBlue">
+        <img src={Checkmark} className="select-none" />
+      </div>
       <div className="flex select-none flex-col">
         <p className="font-bold text-marineBlue">{label}</p>
         <p className="text-coolGray">{description}</p>

@@ -18,7 +18,7 @@ const stateComponent = [
 const nextanim = {
   initial: { opacity: 0, y: 10 },
   animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -10 },
+  exit: { opacity: 0, y: -10, filter: "blur(2px)" },
 };
 
 const MultiStepFormPage = () => {
@@ -50,11 +50,20 @@ const MultiStepFormPage = () => {
             </AnimatePresence>
             <div className="flex flex-row-reverse items-center justify-between">
               <Button label="Next Step" onClick={handleNext} />
-              {state != 0 && (
-                <button className="font-medium" onClick={handlePrevious}>
-                  Go back
-                </button>
-              )}
+              <AnimatePresence>
+                {state != 0 && (
+                  <motion.button
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.15 }}
+                    className="font-medium"
+                    onClick={handlePrevious}
+                  >
+                    Go back
+                  </motion.button>
+                )}
+              </AnimatePresence>
             </div>
           </div>
         </div>
